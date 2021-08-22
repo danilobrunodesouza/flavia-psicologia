@@ -11392,6 +11392,11 @@ p {
     margin-right: 0;
   }
 }
+
+.background-blue {
+  background-color: #ebf2fa;
+}
+
 header.masthead {
   margin-top: 150px;
   padding-top: 10.5rem;
