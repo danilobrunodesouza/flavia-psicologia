@@ -4060,6 +4060,12 @@ textarea.form-control-lg {
   text-decoration: none;
   white-space: nowrap;
 }
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 14px;
+  }
+}
+
 .navbar-nav {
   display: flex;
   flex-direction: column;
@@ -11424,6 +11430,22 @@ header.masthead {
   background-size: 60%;
   
 }
+
+@media only screen and (max-width: 600px) {
+  header.masthead {
+    margin-top: 50px;
+  background-size: 100%;
+ }
+ }
+
+ 
+@media only screen and (max-width: 900px) {
+  header.masthead {
+    margin-top: 50px;
+  background-size: 100%;
+ }
+ }
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
