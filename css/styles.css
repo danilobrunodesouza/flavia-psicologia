@@ -4072,6 +4072,12 @@ textarea.form-control-lg {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .navbar-brand {
+    font-size: 8px;
+  }
+}
+
 .navbar-nav {
   display: flex;
   flex-direction: column;

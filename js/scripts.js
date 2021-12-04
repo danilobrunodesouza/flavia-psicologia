@@ -6,14 +6,14 @@
 //
 // Scripts
 // 
+const navbarCollapsible = document.body.querySelector('#mainNav');
 
 const targets = document.querySelectorAll('[data-animation]')
-const navbarCollapsible = document.body.querySelector('#mainNav');
 
 const animationClass = 'animate'
 
 function animeScroll(){
-    const resultToAnyDeviceSize = window.innerHeight * 0.85
+    const resultToAnyDeviceSize = window.innerHeight * 0.75
     const windowTop = window.scrollY + resultToAnyDeviceSize;
     targets.forEach(element => {
         if(windowTop >  element.offsetTop){
@@ -30,10 +30,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
     var navbarShrink = function () {
-        
-        animeScroll()
+        const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             navbarCollapsible.classList.add('navbar-shrink')
+
             return;
         }
         if (window.scrollY === 0) {
@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', event => {
             navbarCollapsible.classList.add('navbar-shrink')
         }
 
+        animeScroll()
     };
 
     // Shrink the navbar 
