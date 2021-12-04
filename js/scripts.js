@@ -7,6 +7,24 @@
 // Scripts
 // 
 
+const targets = document.querySelectorAll('[data-animation]')
+
+const animationClass = 'animate'
+
+function animeScroll(){
+    const resultToAnyDeviceSize = window.innerHeight * 0.85
+    const windowTop = window.scrollY + resultToAnyDeviceSize;
+    targets.forEach(element => {
+        if(windowTop >  element.offsetTop){
+            element.classList.add(animationClass)
+        } else {
+            element.classList.remove(animationClass)
+
+        }
+    })
+}
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -23,6 +41,7 @@ window.addEventListener('DOMContentLoaded', event => {
             navbarCollapsible.classList.add('navbar-shrink')
         }
 
+        animeScroll()
     };
 
     // Shrink the navbar 
