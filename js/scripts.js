@@ -1,30 +1,3 @@
-/*!
-* Start Bootstrap - Agency v7.0.6 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-const navbarCollapsible = document.body.querySelector('#mainNav');
-
-const targets = document.querySelectorAll('[data-animation]')
-
-const animationClass = 'animate'
-
-function animeScroll(){
-    const resultToAnyDeviceSize = window.innerHeight * 0.75
-    const windowTop = window.scrollY + resultToAnyDeviceSize;
-    targets.forEach(element => {
-        if(windowTop >  element.offsetTop){
-            element.classList.add(animationClass)
-        } else {
-            element.classList.remove(animationClass)
-
-        }
-    })
-}
-
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -32,17 +5,14 @@ window.addEventListener('DOMContentLoaded', event => {
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
-            navbarCollapsible.classList.add('navbar-shrink')
-
             return;
         }
         if (window.scrollY === 0) {
-           // navbarCollapsible.classList.remove('navbar-shrink')
+          //  navbarCollapsible.classList.remove('navbar-shrink')
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
 
-        animeScroll()
     };
 
     // Shrink the navbar 
